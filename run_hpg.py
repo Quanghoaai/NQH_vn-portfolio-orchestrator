@@ -58,12 +58,10 @@ def run_test_hpg():
             financial_report=hpg_financial_report,
             market_context=hpg_market_context
         )
-        
-        print("✅ KẾT QUẢ TỪ AGENT (JSON Output):")
-        print("="*50)
-        print(json.dumps(result, indent=4, ensure_ascii=False))
-        print("="*50)
-        print("="*50)
+        # 3. Kết xuất Alert Terminal + Telegram thay vì Print thường
+        from src.adapters.notifier import Notifier
+        notifier = Notifier()
+        notifier.notify_trade_signal(result)
 
     except Exception as e:
         import traceback
