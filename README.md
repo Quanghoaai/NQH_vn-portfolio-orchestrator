@@ -97,7 +97,7 @@ Bước ngoặt đến vào năm 2020. Khi tham gia khóa học Data Analyst t�
 
 `Python (Security focus) → Gemini 3.1 Flash → Google Antigravity IDE → Gemini CLI.`
 
-Mỗi lần hệ thống phát sinh lỗi là một "Pattern" được tôi đóng gói thành quy tắc. Ở tuổi 45, tôi không còn viết những đoạn code rời rạc. Tôi xây dựng `NQH_vn-portfolio-orchestrator (NPO)` — một thứ "nhỏ nhưng dùng được", chạy local, chat-native để thực thi kỷ luật tài chính cho chính mình.
+Mỗi lần hệ thống phát sinh lỗi là một "Pattern" được tôi đóng gói thành quy tắc. Ở tuổi 41, tôi không còn viết những đoạn code rời rạc. Tôi xây dựng `NQH_vn-portfolio-orchestrator (NPO)` — một thứ "nhỏ nhưng dùng được", chạy local, chat-native để thực thi kỷ luật tài chính cho chính mình.
 
 Tôi rút ra một điều: **AI không phải lợi thế cạnh tranh. Kỷ luật mới là lợi thế cạnh tranh.**
 
