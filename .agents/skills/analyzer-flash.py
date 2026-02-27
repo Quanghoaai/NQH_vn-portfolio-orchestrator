@@ -23,9 +23,9 @@ class AnalyzerFlash:
         with open(full_def_path, 'r', encoding='utf-8') as f:
             self.agent_def = json.load(f)
             
-        # Khởi tạo Gemini 1.5 Flash (Bản cập nhật thực tế cho định nghĩa 3.1 Flash)
+        # Khởi tạo Gemini 2.5 Flash
         self.model = genai.GenerativeModel(
-            model_name='gemini-1.5-flash',
+            model_name='gemini-2.5-flash',
             system_instruction=self.agent_def.get('system_prompt', '')
         )
 
