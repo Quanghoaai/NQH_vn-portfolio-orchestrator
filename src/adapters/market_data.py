@@ -55,6 +55,9 @@ class MarketDataAdapter:
             if is_pct: return f"{val * 100:.1f}%"
             return str(val)
 
+        from src.core.technical import TechnicalAnalyzer
+        tech_data = TechnicalAnalyzer.get_indicators(ticker, self.suffix)
+
         report = f"""
         [BCTC LIVE MARKET DATA: {ticker}]
         - Ngành: {data['sector']}
@@ -68,6 +71,11 @@ class MarketDataAdapter:
         - Nợ vay / Vốn chủ sở hữu (D/E): {fmt(data['debt_to_equity'])}%
         - P/B (Price to Book): {fmt(data['price_to_book'])}
         - Biến động giá 52 tuần: Từ {data['fifty_two_week_low']} đến {data['fifty_two_week_high']}
+        
+        [PHÂN TÍCH KỸ THUẬT NGẮN HẠN]
+        - Lực cầu (RSI 14ngày): {fmt(tech_data.get('rsi_14', 'N/A'))} (Nếu >70 là Quá mua, <30 là Quá bán)
+        - Độ lệch so với MA20: {fmt(tech_data.get('price_vs_ma20_pct', 'N/A'))}% 
+        - Đột biến khối lượng (Vol Surge): {fmt(tech_data.get('vol_surge_pct', 'N/A'))}% so với trung bình 10 phiên
         """
         return report
 
