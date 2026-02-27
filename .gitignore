@@ -37,3 +37,7 @@ secrets/
 *.pem
 *.key
 NPO_MASTER_KEY.txt
+
+# Logs
+logs/
+*.csv

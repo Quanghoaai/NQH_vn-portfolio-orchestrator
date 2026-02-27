@@ -20,6 +20,7 @@ AnalyzerFlash = analyzer_module.AnalyzerFlash
 
 from src.adapters.market_data import MarketDataAdapter
 from src.adapters.notifier import Notifier
+from src.core.journal import TradeJournal
 
 # ==========================================
 # CẤU HÌNH DANH SÁCH THEO DÕI (WHITELIST)
@@ -35,7 +36,7 @@ PORTFOLIO_WATCHLIST = [
 # Thời gian nghỉ (Sleep) giữa các lần gọi AI để tránh dính Rate Limit của Google (15 RPM cho free tier)
 DELAY_BETWEEN_REQUESTS = 10 # Giây
 
-def scan_single_stock(ticker: str, analyzer: AnalyzerFlash, adapter: MarketDataAdapter, notifier: Notifier):
+def scan_single_stock(ticker: str, analyzer: AnalyzerFlash, adapter: MarketDataAdapter, notifier: Notifier, journal: TradeJournal):
     """Quy trình chưng cất 1 mã duy nhất."""
     print(f"\n🔍 [SCANNER] Đang cào dữ liệu Live cho mã: {ticker}...")
     try:
@@ -48,6 +49,9 @@ def scan_single_stock(ticker: str, analyzer: AnalyzerFlash, adapter: MarketDataA
             financial_report=financial_report,
             market_context=market_context
         )
+        
+        # Ghi Log kiểm toán vĩnh viễn (Mission 07)
+        journal.log_trade(result)
         
         # Chỉ đẩy Noti ra Telegram nếu Hành động là BUY (MUA)
         # Bỏ qua HOLD, tránh SPAM điện thoại
@@ -77,12 +81,13 @@ def run_portfolio_scan():
         analyzer = AnalyzerFlash(gemini_api_key=api_key)
         adapter = MarketDataAdapter()
         notifier = Notifier()
+        journal = TradeJournal()
     except Exception as e:
         print(f"Lỗi khởi tạo hệ thống: {e}")
         return
 
     for ticker in PORTFOLIO_WATCHLIST:
-        scan_single_stock(ticker, analyzer, adapter, notifier)
+        scan_single_stock(ticker, analyzer, adapter, notifier, journal)
         print(f"⏳ Nghỉ {DELAY_BETWEEN_REQUESTS}s để tránh Anti-spam AI...\n")
         time.sleep(DELAY_BETWEEN_REQUESTS)
         
