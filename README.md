@@ -14,7 +14,7 @@ NQH_vn-portfolio-orchestrator (NPO) là một công cụ đầu tư chứng kho�
 **Mục tiêu lợi nhuận**: 15-18%  
 
 ## Cấu trúc dự án
-Dự án kế thừa triết lý từ TinySDLC của A Tài, bao gồm mã nguồn (`src/`), đặc tả tác vụ (`.missions/`), định nghĩa tác vụ Agent (`.agents/`), và khuôn mẫu kiến trúc (`docs/patterns/`).
+Dự án kế thừa triết lý từ TinySDLC của A Đặng Thế Tài, bao gồm mã nguồn (`src/`), đặc tả tác vụ (`.missions/`), định nghĩa tác vụ Agent (`.agents/`), và khuôn mẫu kiến trúc (`docs/patterns/`).
 
 ## Giấy phép (License)
 Dự án được phân phối dưới giấy phép MIT License.
