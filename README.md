@@ -89,7 +89,7 @@ python run_backtest.py
 
 Năm 2006, tôi bắt đầu những bước chân đầu tiên vào thế giới lập trình với Assembler và C++. Đó là thời điểm của những tư duy logic tầng thấp, nơi mỗi ô nhớ và thanh ghi đều đòi hỏi sự chính xác tuyệt đối.
 
-Đến năm 2009, tôi rẽ hướng sang lĩnh vực Viễn thông, gắn bó với hạ tầng 2G và 3G. Suốt hơn một thập kỷ, tôi tập trung vào quản trị và vận hành hệ thống — những công việc đòi hỏi sự bền bỉ nhưng dần rời xa việc trực tiếp viết mã.
+Đến năm 2009, tôi rẽ hướng sang lĩnh vực Viễn thông, gắn bó với hạ tầng 2G và 3G, Truyền dẫn quang, Dữ liệu hạ tầng quang, NOC... Suốt hơn một thập kỷ, tôi tập trung vào quản trị và vận hành hệ thống — những công việc đòi hỏi sự bền bỉ nhưng dần rời xa việc trực tiếp viết mã.
 
 Bước ngoặt đến vào năm 2020. Khi tham gia khóa học Data Analyst tại FUNiX, tôi tiếp xúc với Python. Từ những dòng code xử lý dữ liệu đầu tiên, tôi nhận ra sức mạnh của tự động hóa. Nhưng phải đến khi cơn bão AI ập đến, tôi mới thực sự hiểu: Tốc độ của AI là vô nghĩa nếu thiếu đi sự kỷ luật trong quy trình.
 
