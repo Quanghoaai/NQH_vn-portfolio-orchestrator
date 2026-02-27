@@ -103,6 +103,6 @@ Tôi rút ra một điều: **AI không phải lợi thế cạnh tranh. Kỷ lu
 
 Hôm nay, tôi chia sẻ dự án open-source này (MIT License) với hy vọng giúp cộng đồng nhà đầu tư Việt Nam có một bộ khung quản trị vững chắc. Nếu bạn đang dùng AI để code hoặc đầu tư mà chưa có cấu trúc — hãy vào repo xem thử. Nếu hữu ích: Star, mở Issue, hoặc PR góp ý/phản biện.
 
-🔗 **Repo NPO**: https://github.com/Quanghoaai/NQH_vn-portfolio-orchestrator
+🔗 **Repo NPO Ver_1**: https://github.com/Quanghoaai/NQH_vn-portfolio-orchestrator
 
 #OpenSource #MITLicense #AICoding #SoftwareEngineering
