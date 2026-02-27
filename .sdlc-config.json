@@ -1,0 +1,14 @@
+{
+  "project": "NQH_VN-Portfolio-Orchestrator",
+  "version": "1.0.0",
+  "stack": {
+    "language": "Python 3.10+",
+    "ai_engine": "Gemini 3.1 Flash",
+    "ide": "Google Antigravity"
+  },
+  "governance": {
+    "rule_01": "No plain-text API Keys",
+    "rule_02": "All AI code must pass Security-guard check",
+    "target_yield": "15-18%"
+  }
+}
