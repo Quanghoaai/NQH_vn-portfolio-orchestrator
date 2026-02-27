@@ -5,6 +5,10 @@ Mã hóa và giải mã API Keys sử dụng thư viện cryptography (Fernet - 
 import os
 from cryptography.fernet import Fernet
 from typing import Optional
+from dotenv import load_dotenv
+
+# Load environment variables proactively when module is loaded
+load_dotenv()
 
 class Vault:
     def __init__(self, key: Optional[bytes] = None):
